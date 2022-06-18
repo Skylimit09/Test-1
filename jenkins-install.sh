@@ -13,7 +13,7 @@ sudo yum install java-1.8.0-openjdk-devel
 if
  [ $? -ne 0]
  then 
- echo "Yum installation failed. Please read the error and try again."
+ echo "Yum Java installation failed. Please read the error and try again."
  exit 2
  fi
 
