@@ -31,7 +31,7 @@ sudo systemctl status jenkins
 
 sudo systemctl enable jenkins 
 
-ifconfig
+ifconfig | grep broadcast | awk '{print $2}'
 
 echo "Launch your google chrome browser and type the IP address displayed followed by the port number 8080"
 
