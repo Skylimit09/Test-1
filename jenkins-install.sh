@@ -13,11 +13,18 @@ sudo yum install java-1.8.0-openjdk-devel
 if
  [ $? -ne 0]
  then 
- echo "Yum Java installation failed. Please read the error and try again."
+ echo "Yum install java-1.8.0-openjdk-devel failed. Please read the error and try again."
  exit 2
  fi
 
 sudo yum install wget -y
+
+if 
+ [ $? -ne 0 ]
+ then
+ echo "Yum install wget -y failed. Please read the error and try again."
+ exit 3
+ fi
 
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo 
 
